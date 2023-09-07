@@ -1,31 +1,84 @@
 /* Write your code here. */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
 .social-buttons-container {
+  display: flex;
+  justify-content: center;
   background-image: url("https://assets.ccbp.in/frontend/react-js/social-buttons-bg.png");
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 .content-container {
-  padding: 5px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 800px;
 }
+
+@media screen and (min-width: 768px) {
+  .content-container {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .content-container {
+    width: 50%;
+  }
+}
+
 .heading {
   font-size: 35px;
   font-family: "Bree Serif";
   padding: 10px;
   color: #ffffff;
 }
+
+@media screen and (min-width: 768px) {
+  .heading {
+    font-size: 65px;
+  }
+}
 .buttons-container {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons-container {
+    flex-direction: row;
+  }
 }
 .button {
   font-family: "Roboto";
   font-size: 15px;
+  font-weight: 500;
   width: 100px;
   height: 40px;
+  border: none;
   border-radius: 14px;
-  border-width: 0px;
-  margin-left: 17px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
+@media screen and (min-width: 768px) {
+  .button {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
 .like-button {
   background-color: #eab308;
   color: #ffffff;
